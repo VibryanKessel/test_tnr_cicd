@@ -1,6 +1,8 @@
 pipeline{
     agent{
-        image 'maven:3.9.11-eclipse-temurin-24'
+        docker {
+            image 'maven:3.9.11-eclipse-temurin-24'
+        }
     }
     stages{
         stage('clean and compile'){
